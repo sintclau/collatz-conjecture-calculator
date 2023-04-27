@@ -16,7 +16,7 @@ def main():
     global n
     axisX.append(n)
     # f(x)=n/2 for n%2=0 and f(x)=3*n+1 for n%2!=0
-    highestNumberAchieved = 0
+    highestNumberReached = 0
     while n > 1:
         if n % 2 != 0:
             n = (3 * n) + 1
@@ -25,12 +25,12 @@ def main():
             n = n / 2
             axisX.append(n)
         counter += 1
-        if n > highestNumberAchieved:
-            highestNumberAchieved = n
+        if n > highestNumberReached:
+            highestNumberReached = n
         print(str(counter) + " -> " + str(n))
     if n == 1:
         print("The total number of calculations: " + str(counter))
-        print("The highest number achieved is: " + str(highestNumberAchieved))
+        print("The highest number reached is: " + str(highestNumberReached))
         axisY = list(range(1, counter + 2))
         plt.plot(axisY, axisX)
         plt.grid(True)
